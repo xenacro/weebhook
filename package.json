@@ -1,0 +1,28 @@
+{
+  "name": "weebhook",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "18.x"
+  },
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "prebuild": "npx prisma generate",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "author": "xenacro",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.3",
+    "concurrently": "^7.3.0",
+    "typescript": "^4.7.4"
+  },
+  "license": "ISC"
+}
